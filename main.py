@@ -12,7 +12,6 @@ while True:
             player.show_info()
         case 3: 
             print("지금까지 상황을 저장하고 게임을 종료합니다.")
-            break
-          
+            break    
         case _: print("1~3사이의 숫자를 입력해주세요.")
         
