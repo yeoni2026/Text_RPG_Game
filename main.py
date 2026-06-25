@@ -5,7 +5,7 @@ print("=== Text RPG 게임 ===")
 player = create_player()
 
 while True:
-    menu = int(input("1. 사냥터 가기 2. 캐릭터 정보 3. 종료 : "))
+    menu = int(input("1. 사냥터 2. 내 정보 3. 종료 : "))
     match(menu):
         case 1: pass
         case 2: 
