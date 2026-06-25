@@ -1,8 +1,25 @@
 class Player:
-    name="Player1"
-    hp = 100
-    atk = 10
-    speed = 10
-    defense = 10
+    def __init__(self, name, type, hp, attack):
+        self.name = name
+        self.type = type
+        self.hp = hp
+        self.attack = attack
+
     def show_info(self):
-        print(self.name + " ")
+        print("이름: " + self.name)
+        print("직업: " + self.type)
+        print("hp: ")
+
+        for i in range(0, self.hp):
+            print("▋", end='')
+        print(" (" + str(self.hp)+ ")")
+        
+        print("공격력: " + str(self.attack))
+
+        
+class Monster:
+    def __init__(self, type, hp, attack):
+        self.type = type
+        self.hp = hp
+        self.attack = attack
+
