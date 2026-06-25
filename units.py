@@ -1,5 +1,5 @@
 class Player:
-    def __init__(self, name, type, hp = 30, attack = 5):
+    def __init__(self, name, type, hp = 30, attack = 4):
         self.name = name
         self.type = type
         self.hp = hp
@@ -16,7 +16,7 @@ class Player:
         print("공격력: " + str(self.attack))
 
 class Monster:
-    def __init__(self, type, hp, attack):
+    def __init__(self, type = "슬라임", hp = 10, attack = 3):
         self.type = type
         self.hp = hp
         self.attack = attack
