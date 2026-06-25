@@ -9,5 +9,5 @@ while True:
         case 2: 
             player.show_info()
         case 3: 
-            print("게임을 종료합니다.")
+            print("지금까지 상황을 저장하고 게임을 종료합니다.")
             break
