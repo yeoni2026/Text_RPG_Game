@@ -8,7 +8,7 @@ class Player:
     def show_info(self):
         print("이름: " + self.name)
         print("직업: " + self.type)
-        print("hp: ")
+        print("hp: ", end='')
 
         for i in range(0, self.hp):
             print("▋", end='')
@@ -16,7 +16,6 @@ class Player:
         
         print("공격력: " + str(self.attack))
 
-        
 class Monster:
     def __init__(self, type, hp, attack):
         self.type = type
