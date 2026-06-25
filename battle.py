@@ -23,5 +23,5 @@ class Battle():
                         print(f"플레이어가 사망했습니다.. [게임오버]")
                         sys.exit()
                 case 2: 
-                    print("도망치기에 성공했습니다!")
+                    print("사냥터에서 도망쳤습니다!")
                     break
