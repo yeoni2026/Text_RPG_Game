@@ -12,10 +12,13 @@ def start_battle(player):
         match(choice):
             case 1:
                 player.attack(monster)
+                print(f".\n.\n{monster.type}에게 {player.attack}데미지를 입혔습니다!")
                 if monster.hp <= 0:
-                    print(f"{monster.type}을 처치했습니다!")
-                    break                   
-                monster.attack(player)
+                    print(f".\n.\n{monster.type}을 처치했습니다!")
+                    break
+
+                monster.attack(player)   
+                print(f".\n.\n{monster.type}이 반격했습니다!\n{monster.attack}데미지를 입었습니다.")
                 if player.hp <= 0:
                     print(f"플레이어가 사망했습니다.. [게임오버]")
                     sys.exit()
