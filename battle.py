@@ -1,5 +1,6 @@
 from units import  Monster
 import sys
+import os
 
 
 def start_battle(player):
@@ -21,6 +22,8 @@ def start_battle(player):
                 print(f".\n.\n{monster.type}이 반격했습니다!\n{monster.attack}데미지를 입었습니다.")
                 if player.hp <= 0:
                     print(f"플레이어가 사망했습니다.. [게임오버]")
+                    if os.path.exists("player_data.json"):
+                        os.remove("player_data.json")
                     sys.exit()
             case 2: 
                 print("사냥터에서 도망쳤습니다!")

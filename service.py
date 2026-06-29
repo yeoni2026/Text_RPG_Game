@@ -1,4 +1,5 @@
 from units import Player
+import json
 
 def create_player():
     player_name = input("이름을 입력해주세요 : ")
@@ -11,4 +12,13 @@ def create_player():
             continue
         break
     return Player(player_name, job_dic[job])
-    
+
+def load_player_data():
+    with open("player_data.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
+        return Player(data["player_name"], data["player_type"], data["player_hp"], data["player_power"])
+
+def save_player_data(player):
+    with open("player_data.json", "w", encoding="utf-8") as f:
+        data = {"player_name" : player.name, "player_type" : player.type, "player_hp" : player.hp, "player_power" : player.power}
+        json.dump(data, f, ensure_ascii=False, indent=4)
