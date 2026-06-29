@@ -3,10 +3,12 @@ from battle import start_battle
 
 print("=== Text RPG 게임 ===")
 
-data = load_player_data()
-if data:
-    player = data
-else : player = create_player()
+try :
+    player = load_player_data()
+    print("저장된 데이터를 불러오기에 성공했습니다!")
+except :
+    print("기존 정보를 불러오는 데 실패했으므로 처음부터 시작합니다.")
+    player = create_player()
 
 while True:
     menu = int(input("1. 사냥터 2. 내 정보 3. 종료 : "))
