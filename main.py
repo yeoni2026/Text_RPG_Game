@@ -1,8 +1,12 @@
-from service import create_player
+from service import create_player, load_player_data, save_player_data
 from battle import start_battle
+
 print("=== Text RPG 게임 ===")
 
-player = create_player()
+data = load_player_data()
+if data:
+    player = data
+else : player = create_player()
 
 while True:
     menu = int(input("1. 사냥터 2. 내 정보 3. 종료 : "))
@@ -13,6 +17,6 @@ while True:
             player.show_info()
         case 3: 
             print("지금까지 상황을 저장하고 게임을 종료합니다.")
+            save_player_data(player)
             break    
         case _: print("1~3사이의 숫자를 입력해주세요.")
-        
